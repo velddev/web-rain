@@ -12,7 +12,7 @@ html, body {
 
 .button
 {
-  background: url('github-icon.png') left center no-repeat;
+  background: url('./assets/img/github-icon.png') left center no-repeat;
   background-size: 24px 24px;
   background-position: 4px;
   padding-top: 8px;
@@ -30,7 +30,7 @@ html, body {
 }
 
 .button:hover{
-  background: url('github-icon-inverted.png') left center no-repeat;
+  background: url('./assets/img/github-icon-inverted.png') left center no-repeat;
   background-size: 24px 24px;
   background-position: 4px;
 
