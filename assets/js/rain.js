@@ -80,20 +80,22 @@ class Raindrop {
     Draw()
     {
       var grd = canvasContext.createLinearGradient
-      (this.x, this.y, this.x + 2 * this.z, this.y + 4 * this.yvel * this.z);
+      (this.x, this.y, this.x + 2 * this.z, this.y + 12 * this.yvel * this.z);
 
-      grd.addColorStop(0, 'rgba(120,240,255,0)');
-      grd.addColorStop(1, 'rgba(100,200,255,0.6)');
+      grd.addColorStop(0, 'rgba(200,240,255,0)');
+      grd.addColorStop(1, 'rgba(' +
+      Round(200 * this.z) + ',' +
+      Round(240 * this.z) +  ','  +
+      Round(255 * this.z) +  ',' +
+      0.3 + ')');
 
       canvasContext.fillStyle = grd;
 
-      canvasContext.fillRect(this.x, this.y,2 * this.z,4 * this.yvel * this.z);
+      canvasContext.fillRect(this.x, this.y,2 * this.z,12 * this.yvel * this.z);
     }
 }
 
 var canUpdate = true;
-
-var rainColor = new Color(50,150,255,1);
 
 var angle = 1;
 
@@ -133,6 +135,9 @@ function Tick()
   }
 }
 
+function Round(a) {
+  return Math.round(a);
+}
 function Random(min, max) {
   return Math.random() * (max - min) + min;
 }
