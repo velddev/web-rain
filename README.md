@@ -1,4 +1,4 @@
-# web-rain
+<img src="http://veld.one/global-assets/veld-one-rain-banner.png">
 rain in html canvas
 
 check the version in git here: https://velddev.github.io/web-rain/
