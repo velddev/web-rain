@@ -61,7 +61,7 @@ class Raindrop {
       this.y = y;
       this.z = z;
       this.length = 100;
-      this.yvel = 10;
+      this.yvel = 15;
     }
 
     Update()
@@ -117,10 +117,10 @@ for(var i = 0; i < dropAmount; i++)
   );
 }
 
-setInterval(Tick, 1);
-
 function Tick()
 {
+  requestAnimationFrame(Tick);
+
   if(canUpdate)
   {
     canvasContext.canvas.width  = window.innerWidth;
@@ -141,3 +141,5 @@ function Round(a) {
 function Random(min, max) {
   return Math.random() * (max - min) + min;
 }
+
+requestAnimationFrame(Tick);
