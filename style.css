@@ -2,6 +2,20 @@ html, body {
   padding: 0;
   margin: 0;
 
+  overflow: hidden;
+}
+
+.background {
+  position:absolute;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+
+width: 110%;
+
+  z-index: -1;
+
   background:
   linear-gradient(
      rgba(12, 6, 24, 0.5),
@@ -9,6 +23,12 @@ html, body {
    ),
   url("./assets/img/background.jpg") center no-repeat;
   background-size: cover;
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
 }
 
 .downleft {

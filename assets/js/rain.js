@@ -61,7 +61,7 @@ class Raindrop {
       this.y = y;
       this.z = z;
       this.length = 100;
-      this.yvel = 15;
+      this.yvel = 25;
     }
 
     Update()
@@ -71,8 +71,8 @@ class Raindrop {
 
       if(this.y > window.innerHeight)
       {
-        this.y = -10;
-        this.yvel = 10;
+        this.y = -100;
+        this.yvel = 25;
         this.x = Random(0, window.innerWidth);
       }
     }
@@ -80,7 +80,7 @@ class Raindrop {
     Draw()
     {
       var grd = canvasContext.createLinearGradient
-      (this.x, this.y, this.x + 2 * this.z, this.y + 12 * this.yvel * this.z);
+      (this.x, this.y, this.x + 2 * this.z, this.y + 8 * this.yvel * this.z);
 
       grd.addColorStop(0, 'rgba(200,240,255,0)');
       grd.addColorStop(1, 'rgba(' +
@@ -91,7 +91,7 @@ class Raindrop {
 
       canvasContext.fillStyle = grd;
 
-      canvasContext.fillRect(this.x, this.y,2 * this.z,12 * this.yvel * this.z);
+      canvasContext.fillRect(this.x, this.y,2 * this.z,8 * this.yvel * this.z);
     }
 }
 
